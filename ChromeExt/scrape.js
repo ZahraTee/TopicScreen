@@ -2,6 +2,8 @@ var i, imgs, token;
 blocked_topics = [];
 saveBlockedTopic("man");
 
+document.body.appendChild('<div class="user_box">');
+
 
 function saveBlockedTopic(topic)
 {
@@ -15,7 +17,6 @@ function saveBlockedTopic(topic)
         });
 	})
 }
-
 
 function getBlockedTopics()
 {
@@ -51,7 +52,7 @@ function getImageTagsFromURL(blocked, image_element,image_url)
 		url: 'https://api.clarifai.com/v1/tag/',
 		type: 'POST',
 		beforeSend: function (xhr) {
-		    xhr.setRequestHeader('Authorization', 'bearer ' + "kEIZsCcn6Uh1ouFACPka8HPXbKRIqY");
+		    xhr.setRequestHeader('Authorization', 'bearer ' + "JZ5hbKIpkw3HmxVii3A7kqnZIaTwHZ");
 		},
 		data: {url: image_url},
 		success: function (object) {
