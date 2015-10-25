@@ -2,7 +2,7 @@ var i, imgs, token;
 blocked_topics = [];
 saveBlockedTopic("man");
 
-document.body.appendChild('<div class="user_box">');
+// document.body.appendChild('<div class="user_box">');
 
 
 function saveBlockedTopic(topic)
@@ -52,7 +52,7 @@ function getImageTagsFromURL(blocked, image_element,image_url)
 		url: 'https://api.clarifai.com/v1/tag/',
 		type: 'POST',
 		beforeSend: function (xhr) {
-		    xhr.setRequestHeader('Authorization', 'bearer ' + "JZ5hbKIpkw3HmxVii3A7kqnZIaTwHZ");
+		    xhr.setRequestHeader('Authorization', 'bearer ' + "vxXgH9La23PpwxThJIep63eyeAijrL");
 		},
 		data: {url: image_url},
 		success: function (object) {
