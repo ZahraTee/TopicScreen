@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "TopicScreen",
+  "description": "Block unwanted images.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "js": ["jquery.min.js", "scrape.js"],
+      "css": ["overlay.css"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://ajax.googleapis.com/"
+  ]
+}

@@ -1,0 +1,21 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>TopicScreen.</title>
+    <link rel="stylesheet" href = "popup.css">
+  </head>
+  <body>
+   <h1>Blocked Keywords</h1>
+   <div class="input_fields_wrap">
+    <button class="add_field_button">Add More Fields</button>
+    <div><input type="text" name="mytext[]"></div>
+</div>
+  </body>
+  <script type="text/javascript" src="popup.js"></script>
+</html>
+
