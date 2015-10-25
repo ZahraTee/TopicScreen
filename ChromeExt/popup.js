@@ -19,7 +19,6 @@ function saveBlockedTopic(topic)
 {
 	chrome.storage.local.get("blocked_topics", function(items)
 		{
-			//blocked_topics = items.blocked_topics;
 			blocked_topics = ["girl", "politics", "war"];
 			console.log(items);
 			blocked_topics.push(topic);

@@ -10,12 +10,26 @@
     <link rel="stylesheet" href = "popup.css">
   </head>
   <body>
+  <form>
    <h1>Blocked Keywords</h1>
    <div class="input_fields_wrap">
-    <button class="add_field_button">Add More Fields</button>
-    <div><input type="text" name="mytext[]"></div>
-</div>
+    <input id="block_topic" type="text">
+    <button id="add_field_button" onclick="send_topic()">Add to List</button>
+    </div>
+  </form>
   </body>
-  <script type="text/javascript" src="popup.js"></script>
 </html>
+
+<script src="jquery.min.js"></script>
+<script>
+  var topic_list = [];
+  var send_topic = function(){
+    var blocked = $('#block_topic').val();
+    topic_list.push(blocked);
+    console.log(topic_list);
+    document.body.appendChild(document.createTextNode(blocked + " "));
+    var elem = document.getElementById("block_topic");
+    elem.value = "";
+  };
+</script>
 
